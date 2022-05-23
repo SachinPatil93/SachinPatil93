@@ -1,1 +1,31 @@
 
+CustomerDataReprt
+contractClass
+\\
+[DataContractAttribute, SysOperationContractProcessingAttribute(classStr(Sun_ReportUIBuilder))]
+class SunDemoContractClass
+{
+    CustAccount custAccount;
+    FromDate fromDate;
+    ToDate toDate;
+
+    [DataMemberAttribute('CustAccount')]
+    public CustAccount parmCustAccount(CustAccount _custAccount = custAccount)
+    {
+        custAccount = _custAccount;
+        return custAccount;
+    }
+
+    [DataMemberAttribute('FromDate')]
+    public FromDate parmFromDate(FromDate _fromDate = fromDate)
+    {
+        fromDate =_fromDate;
+        return fromDate;
+    }
+
+    [DataMemberAttribute('ToDate')]
+    public ToDate parmToDate(ToDate _toDate = toDate)
+    {
+        toDate = _toDate;
+        return toDate;
+    }
